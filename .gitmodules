@@ -1,0 +1,9 @@
+[submodule "darknet"]
+    path = darknet
+    url = https://github.com/HS-YN/darknet.git
+[submodule "openpose"]
+    path = openpose
+    url = https://github.com/HS-YN/openpose.git
+[submodule "charades-webcam"]
+    path = charades-webcam
+    url = https://github.com/HS-YN/charades-webcam.git
