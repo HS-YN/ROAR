@@ -16,9 +16,14 @@ Robot-Oriented Action Recognition
 
 1. `git clone --recursive https://github.com/HS-YN/ROAR`
 2. Prepare darknet-cpp
-   * `cd darknet; make darknet-cpp; cd ../`
+   * `cd darknet`
+   * `wget https://pjreddie.com/media/files/yolov3.weights`
+   * `make darknet-cpp` 
+   * `cd ../`
 3. Prepare openpose
-   * `cd openpose; mkdir build`
+   * `cd openpose;`
+   * `cd examples/tutorial_pose; protoc -I=. --cpp_out=. ./bodycoord.proto; cd ../../`
+   * `mkdir build`
    * `cmake -D CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-8.0 CUDA_BIN_PATH=/usr/local/cuda-8.0 ..`
    * if you'd like to use different cuda version, please change the directory accordingly.
    * `make; cd ../..`
