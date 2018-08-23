@@ -73,12 +73,12 @@ RUN apt-get install -y curl grep sed dpkg && \
     rm tini.deb && \
     apt-get clean
 
-RUN apt-get install -y autoconf automake libtool curl make g++ unzip && \
-    git clone https://github.com/protocolbuffers/protobuf.git && cd protobuf && \
-    git submodule update --init --recursive && ./autogen.sh && \
-    ./configure --prefix=/usr && make && \
-    make check && make install && ldconfig && \
-    cd .. && rm -rf protobuf
+#RUN apt-get install -y autoconf automake libtool curl make g++ unzip && \
+#    git clone https://github.com/protocolbuffers/protobuf.git && cd protobuf && \
+#    git submodule update --init --recursive && ./autogen.sh && \
+#    ./configure --prefix=/usr && make && \
+#    make check || : && make install && ldconfig && \
+#    cd .. && rm -rf protobuf
 
 RUN git clone --recursive https://github.com/HS-YN/ROAR
 
