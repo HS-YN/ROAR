@@ -1,6 +1,17 @@
 # ROAR
 Robot-Oriented Action Recognition
 
+## Environment
+
+* `Docker` and `Nvidia-docker` installed in host OS
+* `NVIDIA 390.77 Linux Driver` in host OS
+* `X11-xephyr` if you want to see the result real-time
+  * Run `sudo apt-get install xserver-xephyr` in **host**
+* Rest of the dependencies can be resolved in docker container!
+  * Just run `sudo nvidia-docker build -t ROAR .`
+
+(Note: It is highly likely that there won't be any problem executing this program for other NVIDIA driver settings, but if there are any, please don't hesitate sharing your problem via [issues](https://github.com/HS-YN/ROAR/issues).)
+
 ## How to run
 
 1. `git clone --recursive https://github.com/HS-YN/ROAR`
@@ -19,17 +30,6 @@ Robot-Oriented Action Recognition
    * After using, don't forget to deactivate virtual environment by `source deactivate`
 5. You're all set! run `openpose/examples/tutorial_pose/3_HTTP_test2.cpp`
    (If you want this process to be done automatically, please execute `sh setup_ROAR.sh`)
-
-## Environment
-
-* `Docker` and `Nvidia-docker` installed in host OS
-* `NVIDIA 390.77 Linux Driver` in host OS
-* `X11-xephyr` if you want to see the result real-time
-  * Run `sudo apt-get install xserver-xephyr` in **host**
-* Rest of the dependencies can be resolved in docker container!
-  * Just run `sudo nvidia-docker build -t ROAR .`
-
-(Note: It is highly likely that there won't be any problem executing this program for other NVIDIA driver settings, but if there are any, please don't hesitate sharing your problem via [issues](https://github.com/HS-YN/ROAR/issues).)
 
 ## Structure
 
